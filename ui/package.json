@@ -13,9 +13,12 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@ctrl/tinycolor": "^4.1.0",
+    "@element-plus/icons-vue": "^2.3.1",
     "axios": "^0.28.0",
     "echarts": "^5.5.0",
     "element-plus": "^2.5.6",
+    "highlight.js": "^11.9.0",
     "install": "^0.13.0",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.2",
