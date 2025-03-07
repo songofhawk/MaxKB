@@ -52,6 +52,12 @@ class LocalEmbedding(MaxKBBaseModel, HuggingFaceEmbeddings):
     @staticmethod
     def new_instance(model_type, model_name, model_credential: Dict[str, object], **model_kwargs):
         if model_kwargs.get('use_local', True):
+            import logging
+            logging.info(f'--------------------------------')
+            logging.info(f'model_name: {model_name}')
+            logging.info(f'model_credential: {model_credential}')
+            logging.info(f'model_kwargs: {model_kwargs}')
+            logging.info(f'--------------------------------')
             return LocalEmbedding(model_name=model_name, cache_folder=model_credential.get('cache_folder'),
                                   model_kwargs={'device': model_credential.get('device')},
                                   encode_kwargs={'normalize_embeddings': True}
